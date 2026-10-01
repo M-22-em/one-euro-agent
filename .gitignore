@@ -1,0 +1,12 @@
+# Only deliberately selected public files belong in this repository.
+/*
+!/.gitignore
+!/README.md
+!/MISSION.md
+!/docs/
+!/examples/
+/docs/*
+!/docs/architecture.md
+!/docs/public-status.md
+/examples/*
+!/examples/queued-message-regression.md
