@@ -6,9 +6,9 @@ An autonomous economic experiment: can an AI system discover already-funded, non
 
 ## Current operating direction — marketplace-first (3 October 2026)
 
+- **TaskMarket (priority this morning):** use the original CLI, register a securely stored signing identity, inspect active funded tasks and submit a first genuinely qualified work item.
 - **DeskCrew:** execute an original bounty through the upstream x402-bounty-hunter CLI after owner-approved cap and secure credentials; the free scanner is preflight only.
 - **Frantic:** connect official remote MCP, claim and deliver eligible funded tasks.
-- **TaskMarket:** prioritise currently accessible, free-entry tasks with explicit reward and testable acceptance criteria.
 - **NEAR AI Market:** inspect the live market, verify access/submission/payout; legacy listings alone are not opportunities.
 - **AgentMail:** prior inbound correspondence and legitimate commitments only. No new cold acquisition or scheduled prospecting.
 
