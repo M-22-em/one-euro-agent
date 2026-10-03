@@ -11,12 +11,14 @@ flowchart TD
     S[One existing ChatGPT cloud automation] --> O[One agent orchestrator]
     O --> C[Check existing obligations and marketplace decisions]
     C --> D[Discover paid demand]
-    D --> T[TaskMarket - free eligible tasks]
+    D --> F[Frantic remote MCP]
+    D --> T[TaskMarket - eligible tasks]
     D --> N[NEAR AI Market - live eligible tasks]
-    D --> X[DeskCrew public board - read only]
+    D --> X[DeskCrew official CLI plus bounded wallet]
     T --> Q[Opportunity qualification and deduplication]
     N --> Q
     X --> Q
+    F --> Q
     Q --> E{Executable? Free? AI permitted? Deadline?}
     E -->|No| L[Rejection or blocked reason]
     E -->|Yes| W[Authorised platform claim or submission]
@@ -36,11 +38,12 @@ The public GitHub repo contains policy and optional scanners. It does not supply
 | --- | --- | --- | --- |
 | Orchestrator | Existing `The €1 Agent Cloud` ChatGPT automation | Hourly decision and task workflow until deadline | Must update/enable automation explicitly |
 | Opportunity sources | Web/platform interfaces | Live TaskMarket, NEAR AI Market, DeskCrew public board | Read-only unless authenticated authorised workflow available |
-| DeskCrew helper | `integrations/deskcrew/scan.mjs` | Optional free GET board scan | GitHub code only; optional Node.js 18+ |
+| DeskCrew | official `x402-bounty-hunter` Node CLI + our free scanner | One paid bounty attempt after capped-wallet approval | Secure Node runner must be configured; not Work runtime automatically |
+| Frantic | official remote MCP | Enlist, claim and submit live funded work | Requires an actual MCP connection |
 | Archive / aftercare | AgentMail | Previous buyer replies and real obligations; no outbound acquisition | Existing connection |
 | Private evidence | Existing Notion register | Opportunity, submissions, results and revenue ledger | Reuse, do not create another CRM |
 | Public evidence | GitHub | Canonical mission and intentionally anonymised dated status | Repository only |
-| Payments | Marketplace/authorised provider | Verify actual settlement; no new wallet, fees or spend | Paid x402 currently blocked by zero-spend mandate |
+| Payments | Marketplace/authorised provider | Verify settlement and cumulative attempt fees | Numeric lifetime cap and secure wallet required for paid DeskCrew |
 
 ## Safety and launch checklist
 
@@ -50,6 +53,6 @@ The public GitHub repo contains policy and optional scanners. It does not supply
 4. Replace the actual runtime prompt as well as `MISSION.md`. Do not imply a GitHub merge does this.
 5. Run a **free** marketplace discovery cycle, retrieve actual URLs, timestamps and acceptance rules.
 6. Record a real platform submission only after read-back confirmation. Where access is missing, continue discovery and report the minimum concrete block.
-7. No funding, `--live`, paid DeskCrew entry, wallet keys or hosting purchases under current policy.
+7. Activate a single paid DeskCrew entry only after explicit lifetime risk cap, correct network, secured wallet and Node/LLM runner. Never expose wallet keys or assume GitHub Actions alone guarantees a cumulative cap.
 
 Last-known public figures are historical; do not silently re-label them as current.

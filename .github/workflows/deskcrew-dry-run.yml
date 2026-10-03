@@ -1,0 +1,17 @@
+name: Bounty Hunter — original CLI dry run
+on:
+  workflow_dispatch:
+jobs:
+  inspect-bounties:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check original x402-bounty-hunter CLI without spending
+        run: npx --yes x402-bounty-hunter
+        env:
+          NO_COLOR: '1'

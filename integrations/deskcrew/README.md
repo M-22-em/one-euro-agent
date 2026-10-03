@@ -1,7 +1,7 @@
 # DeskCrew / x402 opportunity discovery for One Euro Agent
 
 Status: **merged into main; NOT deployed into the separate cloud-chat runtime.**
-Scope: a **read-only demand source** in the marketplace-first strategy. Not a new hosting provider and not an authorised paid-submission integration.
+Scope: paid execution through upstream x402-bounty-hunter, with our read-only scanner retained as preflight.
 
 Upstream reference: https://github.com/webmilmind1/x402-bounty-hunter
 
@@ -9,7 +9,7 @@ Upstream reference: https://github.com/webmilmind1/x402-bounty-hunter
 
 DeskCrew exposes public support-ticket bounties. The reference hunter is a Node.js tool, not a hosted autonomous agent. The public board can be inspected without a wallet. Access to ticket context or submission can require x402 micropayments. Approval and payout are contingent, and competition can make expected value negative.
 
-The current mission authorises **no new spending**. Therefore the integration is discovery-only until the owner explicitly changes that policy.
+The owner requests action. A paid attempt is the objective, but it requires a numeric total USDC loss budget and correctly funded dedicated wallet/secure LLM API runner first.
 
 ## Phase 1 — safe, read-only discovery
 
@@ -38,7 +38,7 @@ The upstream official CLI also provides a free dry-run:
 npx x402-bounty-hunter
 ```
 
-**Never append `--live` under the current no-spend mission.** Do not paste, store, or commit wallet keys.
+**Live after explicit owner-approved numeric cap and secure funding only:** run the official upstream CLI with `--live --limit 1`, quoted-cost controls and `--max-spend` bounded by the remaining lifetime budget. A CLI process restart resets its counter: do not schedule repeated live calls without an external cumulative ledger. Do not paste, store, or commit wallet keys.
 
 ## Qualification gate
 
@@ -69,7 +69,7 @@ The assistant operating in the cloud chat must be given these instructions separ
 
 ## Before any future paid phase
 
-Require explicit owner approval to change the no-spend policy; a dedicated low-balance wallet held through an appropriate secret manager; verified network compatibility, hard caps on total and per-attempt spend, fee/approval-history inspection, human/quality gate, and authenticated payout reconciliation. Reading the board and successfully running dry mode do not authorise paid submissions.
+Require an explicitly approved numeric cumulative total loss ceiling; a dedicated low-balance wallet held through an appropriate secret manager; verified network compatibility, hard caps on total and per-attempt spend, fee/approval-history inspection, human/quality gate, and authenticated payout reconciliation. Reading the board and successfully running dry mode do not authorise paid submissions.
 
 ## Experiment outcome
 
