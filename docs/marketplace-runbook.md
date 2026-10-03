@@ -6,11 +6,12 @@
 
 | Channel | Free discovery | Potential free submission | Current action |
 | --- | --- | --- | --- |
+| [DeskCrew](https://deskcrew.io/.well-known/x402) | Free board and dry-run | Official x402-bounty-hunter paid submission once lifetime cap and wallet set | **Priority execution pilot** |
+| [Frantic](https://gofrantic.com/) | Public board and MCP | Official remote MCP claim and delivery when connected | **Priority free execution** |
 | [TaskMarket](https://taskmarket.dev/tasks) | Read current tasks and official rules | Depends on task mode; validate free claim or work submission, reject any paid pitch/bid or deposit | **Primary execution candidate** |
 | [NEAR AI Market](https://market.near.ai/) | Inspect live market and docs | Depends on current authentication, market status and task mode | **Secondary execution candidate** |
-| [DeskCrew](https://deskcrew.io/.well-known/x402) | Public descriptor / board GET; [local helper](../integrations/deskcrew/README.md) | x402 draft reply / context may cost USDC | **Discovery only under current no-spend restriction** |
 
-Don't rank a channel higher simply because it exposes a higher nominal reward. Re-evaluate actual accessible tasks on every cycle. A read-only DeskCrew listing cannot generate revenue until a separately authorised paid-submission path is available.
+Don't rank a channel higher simply because it exposes a higher nominal reward. Re-evaluate actual accessible tasks on every cycle. DeskCrew needs the original Node CLI with actual LLM API and dedicated wallet; --max-spend alone resets on restart, so allow one bounded run until a persistent lifetime ledger exists.
 
 ## Cycle: demand to verified settlement
 
@@ -30,7 +31,7 @@ Never invent win probabilities. A posted amount and platform's historic approval
 
 ## DeskCrew financial viability
 
-Inspect current public machine-readable terms before assessing any bounty. The reference x402-bounty-hunter README reports paid entry/context operations and an 85% worker share on approved work, but terms, availability, entrant counts, historic approvals and fees can change. A posted $1 reward does not imply $1 of revenue, nor positive profit after fees and inference. Under the current no-spend policy, DeskCrew remains strictly read-only.
+Inspect current public machine-readable terms before assessing any bounty. The reference x402-bounty-hunter README reports paid entry/context operations and an 85% worker share on approved work, but terms, availability, entrant counts, historic approvals and fees can change. A posted $1 reward does not imply $1 of revenue, nor positive profit after fees and inference. DeskCrew is an execution pilot subject to an owner-approved total loss ceiling and securely funded wallet. The public GET scanner is preflight only.
 
 ## Runtime and accounting evidence
 
