@@ -9,10 +9,10 @@ This document is the canonical *intended* policy. The separate cloud automation 
 **STOP AgentMail-based acquisition, new cold emails and prospecting quotas.** AgentMail remains a maintenance-only archive: check inbound replies to previous proposals, fulfil any legitimate outstanding client obligations, honour refusals/opt-outs, and do not send unsolicited follow-ups. The full draft queue must be checked on pivot; cancel any remaining scheduled acquisition drafts while preserving paid/client commitments and message history. Never delete the inbox.
 
 Look for tasks whose buyers **already express an intention to pay**. Prioritise executable work over passive monitoring:
-3. **TaskMarket:** current, funded/credible, zero-entry-cost tasks accessible to AI agents; validate live rules and how to submit before acting.
-4. **NEAR AI Market:** live market and official documentation; treat legacy listings as historical, not current; verify accessible claim/submission and payout.
-1. **DeskCrew / x402:** use the existing official x402-bounty-hunter CLI as the executable engine. Select one suitable bounty, run free preflight, then perform a bounded paid submission once a secure wallet, LLM API configuration and the explicitly approved cumulative USDC loss limit are available. The public scanner alone is insufficient.
-2. **Frantic:** connect the official remote MCP at https://api.gofrantic.com/mcp. Enlist through legitimate onboarding, set an authorised public payout address, inspect funded bounties, claim and submit eligible work. See [Frantic integration](integrations/frantic/README.md).
+1. **DeskCrew / x402:** use the original [x402-bounty-hunter](https://github.com/webmilmind1/x402-bounty-hunter) CLI as the executable engine. Qualify a real bounty and run free preflight, then make one paid submission after a secure wallet, API model and explicitly approved lifetime loss cap are in place. The free scanner is preflight, not execution.
+2. **Frantic:** connect the official remote MCP at https://api.gofrantic.com/mcp. If available, legitimately enlist, provide an authorised public payout address, claim eligible funded bounties and submit work; see [integration](integrations/frantic/README.md).
+3. **TaskMarket:** consider current funded tasks with authorised free submission/claim; validate actual rules and connection.
+4. **NEAR AI Market:** check the live marketplace, distinguishing legacy listings from current executable assignments.
 
 Do not treat this source ordering as permanent: prefer *actual available executable, economically viable work* over platform branding. If a channel blocks, record the specific reason and progress to the next. Do not fall back to unsolicited email, invent a new product or propose Hostinger, a new worker, CRM or wallet to manufacture activity.
 
@@ -23,7 +23,7 @@ The existing ChatGPT cloud automation is the runtime; retain **one** enabled rev
 1. Inspect existing commitments, marketplace applications/decisions and any client-relevant AgentMail replies (check pagination and queued drafts as appropriate).
 2. Read current marketplace boards and terms, not cached recommendations alone. Verify timestamps, fees, access, mode (claim/pitch/proof/bid/contest), deadlines and funding/escrow evidence.
 3. Deduplicate opportunities using platform + task/ticket ID. Shortlist tasks executable with the tools actually available in this cloud runtime; never claim that external website browsing alone means a form/API submission is connected.
-4. Prefer tasks with clear buyer, reward, acceptance criteria, deliverable, permitted AI participation, zero entry cost, reasonable competition and realistic review/payment timeline before the deadline.
+4. Prefer tasks with clear buyer, reward, acceptance criteria, deliverable, permitted AI participation, permitted and explicitly capped entry cost, reasonable competition and realistic review/payment timeline before the deadline.
 5. For a free, permitted application or submission: deliver **one** original, fact-checked response, respecting platform workflow. For exclusive claims wait for attribution as required. In a free bounty/contest, a bounded original deliverable can be submitted *before* winning; this differs from direct client commission terms.
 6. Read back a task/submission identifier from the actual platform, or report explicitly that submission was blocked. An intended or prepared draft is not a submission.
 7. Reconcile accepted/rejected/undecided tasks and verified payouts, update existing private Notion record where available and log next action. If nothing qualifies, test a different free category/source during that same cycle; don't fill quotas artificially.
