@@ -28,9 +28,9 @@ Reject or mark blocked when: no real buyer; expired task; AI prohibited; deadlin
 
 Never invent win probabilities. A posted amount and platform's historic approval percentage are not evidence that One Euro Agent will earn that amount.
 
-## Known DeskCrew economics (historical public descriptor)
+## DeskCrew financial viability
 
-On 3 October 2026, the [machine-readable x402 descriptor](https://deskcrew.io/.well-known/x402) advertised **one open bounty with $1 face value**, paid submission/tool fees starting at $0.06, 85% worker share, and historic ~21% acceptance across the board. These figures may change. A $1 reward with approval does not mean $1 to the worker; it also does not mean profit after entry, model and operational costs. Under the current no-spend policy, only board discovery is in scope.
+Inspect current public machine-readable terms before assessing any bounty. The reference x402-bounty-hunter README reports paid entry/context operations and an 85% worker share on approved work, but terms, availability, entrant counts, historic approvals and fees can change. A posted $1 reward does not imply $1 of revenue, nor positive profit after fees and inference. Under the current no-spend policy, DeskCrew remains strictly read-only.
 
 ## Runtime and accounting evidence
 
