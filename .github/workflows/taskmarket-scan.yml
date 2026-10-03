@@ -1,0 +1,23 @@
+name: TaskMarket free opportunity scan
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/taskmarket-scan.yml'
+      - 'integrations/taskmarket/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-opportunity-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Install official TaskMarket CLI
+        run: npm install --global @lucid-agents/taskmarket@latest
+      - name: Read current open tasks
+        run: taskmarket task list --status open --limit 40
+      - name: Read active tasks
+        run: taskmarket task list --status open --phase active --limit 40
+      - name: Read exclusive claim opportunities
+        run: taskmarket task list --status open --phase active --mode claim --limit 40
