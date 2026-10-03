@@ -9,10 +9,13 @@ Find an actual need, produce evidence of useful work, agree a small paid scope, 
 ## Every two-hour cycle
 
 1. Read incoming messages, incidents and scheduled drafts, including all pages.
-2. Prioritise interested buyers and existing delivery commitments.
-3. Research a pool of candidates and qualify 10 new prospects to contact.
-4. For each prospect, retain the source and date, the need, a verified public professional contact, an executable deliverable, and the actual outgoing message confirmation.
-5. Record the achieved count out of 10, responses and economic outcomes. A draft, repeat contact or follow-up is not a new prospect. If the target is missed, record the actual result and specific reason.
+2. Prioritise interested buyers, existing delivery commitments and blocked commercial steps.
+3. Scan **existing paid demand** as an additional discovery channel: inspect the public DeskCrew board and its published payment/approval terms, without submitting anything or spending money. Follow [the DeskCrew integration guide](integrations/deskcrew/README.md).
+4. Record each candidate with source, date, buyer/board, actual offered reward, known fees, number of competing entries, restrictions and deadline. A listed bounty is neither a sale nor guaranteed profit.
+5. Continue direct acquisition: research and qualify new B2B prospects when higher-priority commercial steps are covered. Ten new qualified contacts per cycle remains a stretch activity indicator, not a substitute for demonstrated demand or an obligation to invent leads.
+6. Record the actual outcome: new qualified opportunities, contacts sent, replies, economic changes and reasons for missed goals. A draft, repeat contact or follow-up is not a new prospect.
+
+**Read-only guardrail:** the existing no-new-spend rule explicitly prohibits paid x402 context retrieval, paid draft submission, `--live`, funding a wallet, new account charges or registering paid services. Scanning a public bounty board is authorised; attempting to enter a paid bounty is not. Do not store wallet secrets or assume GitHub files alter the separate cloud runtime.
 
 ## Qualification and communication
 
