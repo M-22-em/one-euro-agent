@@ -1,44 +1,55 @@
-# Current structure
+# One Euro Agent — runtime and target architecture
 
-This describes the actual experiment as observed on 1 October 2026. It is not a standalone software deployment.
+## Observed historical architecture (1 October 2026)
+
+Previously: cloud scheduler → general-purpose agent → AgentMail outbound prospecting → proposed B2B scope → payment → delivery → Notion/public report. See [dated snapshot](public-status.md). This remains historical evidence, not the current operating direction.
+
+## Marketplace-first design (3 October 2026)
 
 ```mermaid
 flowchart TD
-    Scheduler[Cloud scheduler: every two hours] --> Agent[One general-purpose AI agent]
-    Brief[Operating brief and cloud chat history] --> Agent
-    Learning[Private learning records in Notion] --> Agent
-    Agent --> Inbox[AgentMail: replies, incidents and drafts]
-    Agent --> Research[Web research and source checks]
-    Research --> Qualification[Actual need, buyer and executable task]
-    Qualification --> Outreach[Original proposal and outgoing-message check]
-    Outreach --> Agreement[Explicit purchase agreement]
-    Agreement --> Payment[Authenticated payment verification]
-    Payment --> Delivery[Produce and deliver agreed work]
-    Delivery --> Accounting[Actual receipts, costs and net result]
-    Accounting --> Learning
+    S[One existing ChatGPT cloud automation] --> O[One agent orchestrator]
+    O --> C[Check existing obligations and marketplace decisions]
+    C --> D[Discover paid demand]
+    D --> T[TaskMarket - free eligible tasks]
+    D --> N[NEAR AI Market - live eligible tasks]
+    D --> X[DeskCrew public board - read only]
+    T --> Q[Opportunity qualification and deduplication]
+    N --> Q
+    X --> Q
+    Q --> E{Executable? Free? AI permitted? Deadline?}
+    E -->|No| L[Rejection or blocked reason]
+    E -->|Yes| W[Authorised platform claim or submission]
+    W --> R[Read back actual submission ID and decision]
+    R --> P[Independent payout verification]
+    P --> A[Existing Notion private ledger and learning]
+    L --> A
+    A --> O
+    O --> M[AgentMail: prior inbox and client obligations only]
 ```
 
-## Observed operational capability
+The public GitHub repo contains policy and optional scanners. It does not supply TaskMarket/NEAR accounts, platform credentials or direct submission rights, nor deploy Work runtime instructions automatically.
 
-- The cloud scheduler has executed runs.
-- Web research and AgentMail reading, sending and draft management have been exercised.
-- One batch of 10 new prospects was completed from 15:00:39 to 15:14:52 Europe/Paris on 1 October: 14 minutes 13 seconds.
-- Private Notion learning records have received outreach records. This does not demonstrate automatic learning or better conversion.
-- Three valid follow-ups remained scheduled at the latest checked queue.
+## Execution surfaces and responsibility
 
-## Unproven or incomplete stages
+| Layer | Existing asset | New role | Deployment |
+| --- | --- | --- | --- |
+| Orchestrator | Existing `The €1 Agent Cloud` ChatGPT automation | Hourly decision and task workflow until deadline | Must update/enable automation explicitly |
+| Opportunity sources | Web/platform interfaces | Live TaskMarket, NEAR AI Market, DeskCrew public board | Read-only unless authenticated authorised workflow available |
+| DeskCrew helper | `integrations/deskcrew/scan.mjs` | Optional free GET board scan | GitHub code only; optional Node.js 18+ |
+| Archive / aftercare | AgentMail | Previous buyer replies and real obligations; no outbound acquisition | Existing connection |
+| Private evidence | Existing Notion register | Opportunity, submissions, results and revenue ledger | Reuse, do not create another CRM |
+| Public evidence | GitHub | Canonical mission and intentionally anonymised dated status | Repository only |
+| Payments | Marketplace/authorised provider | Verify actual settlement; no new wallet, fees or spend | Paid x402 currently blocked by zero-spend mandate |
 
-- A sourced need does not demonstrate a purchase decision.
-- An outgoing message marked sent does not establish inbox delivery, reading or interest.
-- No Microbuild purchase or receipt was confirmed at the dated public snapshot.
-- Payment-provider account reads work, but creation of the experiment's checkout objects failed at the last permission test. No verified experiment-specific payment link is claimed.
-- Paid production, delivery and reconciliation have not been demonstrated end to end.
+## Safety and launch checklist
 
-The runtime depends on separately authorised cloud tools and services. Public files do not contain the private connections or launch the scheduler. Local copies of internal notes are not runtime dependencies.
+1. Audit and cancel any pending outbound acquisition drafts before resuming hourly operation.
+2. Retain historical correspondence and previously promised client obligations.
+3. Ensure precisely one revenue automation is active; other historical tasks remain disabled.
+4. Replace the actual runtime prompt as well as `MISSION.md`. Do not imply a GitHub merge does this.
+5. Run a **free** marketplace discovery cycle, retrieve actual URLs, timestamps and acceptance rules.
+6. Record a real platform submission only after read-back confirmation. Where access is missing, continue discovery and report the minimum concrete block.
+7. No funding, `--live`, paid DeskCrew entry, wallet keys or hosting purchases under current policy.
 
-
-## Planned demand-first channel (GitHub integration, not runtime deployment)
-
-The `main` branch now includes a public, read-only DeskCrew source under [`integrations/deskcrew/`](../integrations/deskcrew/README.md). The cloud scheduler/runtime must be separately configured to inspect this public board during its existing research cycle.
-
-Discovery can operate through the runtime's current web tool; Node.js 18+ is only needed if its optional helper script is used. No new hosting, wallet, provider credentials, paid context retrieval or submission is included. The separate cloud agent's deployment/execution is not established by a GitHub merge. The existing `MISSION.md` prohibition on new spending remains in force.
+Last-known public figures are historical; do not silently re-label them as current.
