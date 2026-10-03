@@ -1,6 +1,6 @@
 # DeskCrew / x402 opportunity discovery for One Euro Agent
 
-Status: **integration prepared, NOT deployed into the separate cloud-chat runtime.**
+Status: **merged into main; NOT deployed into the separate cloud-chat runtime.**
 Scope: a supplementary source of **already advertised paid demand**, not a new hosting provider and not a replacement for the existing commercial strategy.
 
 Upstream reference: https://github.com/webmilmind1/x402-bounty-hunter
