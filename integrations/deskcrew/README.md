@@ -1,7 +1,7 @@
 # DeskCrew / x402 opportunity discovery for One Euro Agent
 
 Status: **merged into main; NOT deployed into the separate cloud-chat runtime.**
-Scope: a supplementary source of **already advertised paid demand**, not a new hosting provider and not a replacement for the existing commercial strategy.
+Scope: a **read-only demand source** in the marketplace-first strategy. Not a new hosting provider and not an authorised paid-submission integration.
 
 Upstream reference: https://github.com/webmilmind1/x402-bounty-hunter
 
@@ -62,7 +62,7 @@ Keep the cloud runtime and scheduler unchanged:
 - Scan the DeskCrew public board as one *demand-first* discovery channel.
 - Deduplicate against the private opportunity register by source + ticket ID.
 - Record any qualified candidates with source and timestamp.
-- Continue other authorised commercial work.
+- Continue zero-cost marketplace work on TaskMarket/NEAR; do not resume AgentMail cold acquisition.
 - Log API failures truthfully; do not replace them with invented bounties.
 
 The assistant operating in the cloud chat must be given these instructions separately: merging GitHub code/documentation does not deploy it into that runtime.
