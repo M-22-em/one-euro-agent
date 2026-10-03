@@ -6,9 +6,9 @@
 
 | Channel | Free discovery | Potential free submission | Current action |
 | --- | --- | --- | --- |
-| [DeskCrew](https://deskcrew.io/.well-known/x402) | Free board and dry-run | Official x402-bounty-hunter paid submission once lifetime cap and wallet set | **Priority execution pilot** |
+| [DeskCrew](https://deskcrew.io/.well-known/x402) | Free board and dry-run | Official x402-bounty-hunter paid submission once lifetime cap and wallet set | **Secondary execution pilot after wallet funding** |
 | [Frantic](https://gofrantic.com/) | Public board and MCP | Official remote MCP claim and delivery when connected | **Priority free execution** |
-| [TaskMarket](https://taskmarket.dev/tasks) | Read current tasks and official rules | Depends on task mode; validate free claim or work submission, reject any paid pitch/bid or deposit | **Primary execution candidate** |
+| [TaskMarket](https://taskmarket.dev/tasks) | Official CLI `npm install -g @lucid-agents/taskmarket`; `taskmarket task list --status open --phase active` | `taskmarket init` + securely persisted wallet/identity, owner-reviewed legal acceptance, free eligible claim/submit work | **FIRST operational priority** |
 | [NEAR AI Market](https://market.near.ai/) | Inspect live market and docs | Depends on current authentication, market status and task mode | **Secondary execution candidate** |
 
 Don't rank a channel higher simply because it exposes a higher nominal reward. Re-evaluate actual accessible tasks on every cycle. DeskCrew needs the original Node CLI with actual LLM API and dedicated wallet; --max-spend alone resets on restart, so allow one bounded run until a persistent lifetime ledger exists.
@@ -40,3 +40,16 @@ Private Notion register is the existing durable record; if unavailable, keep a d
 Keep direct currency and withdrawal state. USDC received in a platform wallet is not automatically realised EUR net. The current €10 objective requires verified net EUR (or a clearly justified conversion with real cash availability), not potential rewards.
 
 **No Hostinger, new server, new CRM or unsolicited email campaign is needed for this experiment.**
+
+## Today: TaskMarket go-live dependency
+
+1. Official first-party CLI: `npm install -g @lucid-agents/taskmarket`.
+2. Read live opportunities free: `taskmarket task list --status open --phase active --limit 40` and `taskmarket task list --status open --phase active --mode claim --limit 40`.
+3. Persistently enrol agent: `taskmarket init`. Protect its keystore; do not regenerate identity per ephemeral GitHub Actions job. If the legal-policy bundle requires acceptance, show its actual contents to the owner and obtain approval. Do not silently run `legal accept --yes`.
+4. Check `taskmarket inbox`, `taskmarket actions`, choose only an actually active funded and AI-eligible task, read `taskmarket task get <taskId>`.
+5. For claim tasks follow the official claim prerequisites; for bounty tasks, prepare an original quality-assured file and use `taskmarket task submit <taskId> --file <path>`. Record platform-returned submission ID, feedback and payout using `taskmarket stats`.
+6. The `taskmarket-scan.yml` GitHub action is PUBLIC DISCOVERY ONLY. It cannot create a persistent agent wallet by itself. Never put its private key in repository files, Actions logs or chat.
+
+### DeskCrew paid pilot
+
+Use original `x402-bounty-hunter` CLI, not our free scan helper, for actual submission. A concrete numeric experiment-wide USDC loss limit, low-balance dedicated signer securely configured and an LLM API key/model are still prerequisites. Owner may fund only the dedicated low-balance wallet, not expose private keys. The CLI's `--max-spend` resets between runs: single attempt unless a cumulative persistent cost ledger is enforced.
