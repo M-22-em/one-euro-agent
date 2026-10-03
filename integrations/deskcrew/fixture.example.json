@@ -1,0 +1,13 @@
+{
+  "contests": [
+    {
+      "ticketId": "fixture-001",
+      "subject": "Illustrative support question",
+      "bountyUsd": 0.5,
+      "entryFeeUsd": 0.06,
+      "entrants": 1,
+      "payoutNetwork": "base",
+      "status": "open"
+    }
+  ]
+}
