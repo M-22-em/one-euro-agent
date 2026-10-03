@@ -20,25 +20,25 @@ If the existing Work/cloud agent can browse HTTP APIs, use its *existing* resear
 
 If Node.js 18+ is available in the runtime, the optional zero-dependency helper is:
 
-\`\`\`sh
+```sh
 node integrations/deskcrew/scan.mjs
-\`\`\`
+```
 
 For a local fixture-based test (no network):
 
-\`\`\`sh
+```sh
 node integrations/deskcrew/scan.mjs --fixture integrations/deskcrew/fixture.example.json
-\`\`\`
+```
 
 The helper makes only one public **GET** request; it never signs, posts, imports private keys, generates transactions, or charges anything. API schema changes cause an explicit failure rather than being silently reported as zero opportunities. A public board snapshot cannot determine wallet-specific eligibility.
 
 The upstream official CLI also provides a free dry-run:
 
-\`\`\`sh
+```sh
 npx x402-bounty-hunter
-\`\`\`
+```
 
-**Never append \`--live\` under the current no-spend mission.** Do not paste, store, or commit wallet keys.
+**Never append `--live` under the current no-spend mission.** Do not paste, store, or commit wallet keys.
 
 ## Qualification gate
 
