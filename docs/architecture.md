@@ -39,6 +39,6 @@ The runtime depends on separately authorised cloud tools and services. Public fi
 
 ## Planned demand-first channel (GitHub integration, not runtime deployment)
 
-The branch `feature/deskcrew-demand-scan` adds a public, read-only DeskCrew source under [`integrations/deskcrew/`](../integrations/deskcrew/README.md). The cloud scheduler/runtime must be separately configured to inspect this public board during its existing research cycle.
+The `main` branch now includes a public, read-only DeskCrew source under [`integrations/deskcrew/`](../integrations/deskcrew/README.md). The cloud scheduler/runtime must be separately configured to inspect this public board during its existing research cycle.
 
 Discovery can operate through the runtime's current web tool; Node.js 18+ is only needed if its optional helper script is used. No new hosting, wallet, provider credentials, paid context retrieval or submission is included. The separate cloud agent's deployment/execution is not established by a GitHub merge. The existing `MISSION.md` prohibition on new spending remains in force.
