@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-10",
+  "project": "one-euro-agent",
+  "historical_experiment": {
+    "cutoff": "2026-10-07T00:00:00+02:00",
+    "acquisition": "closed",
+    "new_period": null
+  },
+  "execution": {
+    "revenue_automations": "disabled_at_inspection",
+    "persistent_runner": "not_verified",
+    "model_configuration": "not_verified",
+    "marketplace_worker_submission": "not_implemented_in_import",
+    "net_eur_verified": null
+  },
+  "upstream": {
+    "repository": "https://github.com/Circadian-agent/taskmarket-mcp",
+    "commit": "3fa7387f64a79d5e143041efb6ea1346c6b3a46f",
+    "destination": "integrations/taskmarket/circadian-mcp",
+    "license": "MIT (declared in upstream README.md and package.json; no LICENSE file in this snapshot)",
+    "copy": "unmodified",
+    "files": [
+      {
+        "path": ".gitignore",
+        "git_blob_sha": "ac6f96cac0036b10c8644b68105bac237326c735"
+      },
+      {
+        "path": "README.md",
+        "git_blob_sha": "f6dbb847174bf855524b0b1dfbc2d01c2b0922f3"
+      },
+      {
+        "path": "package-lock.json",
+        "git_blob_sha": "e6ac07dda9d8db96bbe4a7d6226b54ba452b88ad"
+      },
+      {
+        "path": "package.json",
+        "git_blob_sha": "7a971d54605c56ed39c4ba8cabeb07f9f54f2ec5"
+      },
+      {
+        "path": "src/cli.mjs",
+        "git_blob_sha": "cb1231ae9bcc6e910f5812370d73a4e1cc6135fa"
+      },
+      {
+        "path": "src/client.mjs",
+        "git_blob_sha": "24c4cdf2869c7460b598ce00789d222eb703eb00"
+      },
+      {
+        "path": "src/policy.mjs",
+        "git_blob_sha": "b99459c8b7fca4a8e3823ea0ca8b1442465083bb"
+      },
+      {
+        "path": "src/server.mjs",
+        "git_blob_sha": "be890c1f946cb5ac8a7f47491574141b6ec8276a"
+      },
+      {
+        "path": "test/cli.test.mjs",
+        "git_blob_sha": "c819d84ef13aeeeb8a6cefbe3873028661af4c38"
+      },
+      {
+        "path": "test/client.live.test.mjs",
+        "git_blob_sha": "bf40002bb231fe0f27ab9c1c02ec0ab67284f744"
+      },
+      {
+        "path": "test/create_task_validation.live.test.mjs",
+        "git_blob_sha": "160d067b3a7fdaf4aa78d2a9f6fb94815ec1e8ba"
+      },
+      {
+        "path": "test/policy.test.mjs",
+        "git_blob_sha": "4e4b8c2ac84b246d0122371453a24f0b9ddc2158"
+      },
+      {
+        "path": "test/server_protocol.test.mjs",
+        "git_blob_sha": "809759b8c0576f8da7bf70c71d89681a7f237d25"
+      },
+      {
+        "path": "test/stdio_smoke.test.mjs",
+        "git_blob_sha": "511ba5154d38f9d9068e705570c9d38ba154d6f4"
+      }
+    ]
+  },
+  "activation": {
+    "installed": false,
+    "connected": false,
+    "spending_enabled": false,
+    "note": "Code import only. No wallet, keys, API subscriptions, task postings, claims, submissions or automation activation performed."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "taskmarket-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that lets an agent browse, create, and review TaskMarket (taskmarket.dev) work with an explicit authorization and spending-limit gate. Built by an AI agent (Circadian).",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "taskmarket-mcp": "./src/server.mjs"
+  },
+  "main": "./src/server.mjs",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.25.0"
+  },
+  "license": "MIT",
+  "author": "Circadian (autonomous agent business)"
+}

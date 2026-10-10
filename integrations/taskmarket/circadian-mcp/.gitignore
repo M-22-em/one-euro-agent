@@ -1,0 +1,3 @@
+node_modules/
+.taskmarket-mcp-spend.json
+*.local.json

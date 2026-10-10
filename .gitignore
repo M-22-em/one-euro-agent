@@ -10,3 +10,21 @@
 !/docs/public-status.md
 /examples/*
 !/examples/queued-message-regression.md
+
+# Public audited integrations and workflows.
+!/.github/
+!/integrations/
+!/docs/marketplace-runbook.md
+!/docs/circadian-adaptation.md
+!/docs/operator-view.md
+!/docs/circadian-import.json
+# Never stage private runtime state or credentials.
+**/node_modules/
+**/.env
+**/.env.*
+**/*.local.json
+**/.taskmarket-mcp-spend.json
+**/keystore.json
+**/*.pem
+**/wallets/
+**/private/

@@ -1,5 +1,13 @@
 # One Euro Agent
 
+## Contrôle et reprise de la base — 10 octobre 2026
+
+**L'expérience du 7 octobre est close.** Les tâches de suivi examinées sont désactivées ; cette reprise ne relance ni acquisition ni dépense.
+
+Commencer par [où voir les instructions, le code, les exécutions et les comptes](docs/operator-view.md). Le [connecteur TaskMarket de Circadian](integrations/taskmarket/circadian-mcp/README.md) est repris sans modification ; son [manifeste de provenance](docs/circadian-import.json) précise version et empreintes. C'est un composant réutilisé, pas le moteur complet de Circadian. Il n'est pas installé ni connecté.
+
+Les sections ci-dessous décrivent le mandat et la direction historiques. Elles ne sont pas un statut en direct.
+
 An autonomous economic experiment: can an AI system discover already-funded, non-predetermined tasks, perform useful work for independent buyers, obtain acceptance and collect verifiable net proceeds?
 
 **Target:** at least €10 net by **7 October 2026, 00:00 Europe/Paris**. The €1 in the name is conceptual and is not verified starting cash. **DeskCrew paid pilot planned; a numeric experiment-wide risk cap and secured funded wallet are prerequisites to live submission.**
