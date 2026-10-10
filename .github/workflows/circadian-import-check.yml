@@ -1,0 +1,41 @@
+name: Circadian import integrity and offline tests
+on:
+  pull_request:
+    paths:
+      - 'integrations/taskmarket/circadian-mcp/**'
+      - 'docs/circadian-import.json'
+      - '.github/workflows/circadian-import-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify all imported Git blob hashes
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync } from 'node:fs';
+          import { execFileSync } from 'node:child_process';
+          import assert from 'node:assert/strict';
+          const m = JSON.parse(readFileSync('docs/circadian-import.json', 'utf8'));
+          const prefix = m.upstream.destination + '/';
+          const tracked = execFileSync('git', ['ls-files', '-z', '--', m.upstream.destination], { encoding: 'utf8' }).split('\0').filter(Boolean);
+          assert.deepEqual(tracked.sort(), m.upstream.files.map(f => prefix + f.path).sort());
+          for (const f of m.upstream.files) {
+            const actual = execFileSync('git', ['hash-object', '--', prefix + f.path], { encoding: 'utf8' }).trim();
+            assert.equal(actual, f.git_blob_sha, f.path + ' differs from upstream');
+          }
+          console.log('Verified', m.upstream.files.length, 'unmodified upstream files at', m.upstream.commit);
+          NODE
+      - name: Install locked dependencies without install scripts
+        working-directory: integrations/taskmarket/circadian-mcp
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Run upstream offline tests only
+        working-directory: integrations/taskmarket/circadian-mcp
+        run: node --test test/policy.test.mjs test/cli.test.mjs test/stdio_smoke.test.mjs
