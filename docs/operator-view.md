@@ -52,7 +52,7 @@ node --test test/policy.test.mjs test/cli.test.mjs test/stdio_smoke.test.mjs
 
 Ces trois fichiers de tests amont couvrent les règles, le CLI simulé et le démarrage MCP. Ils n'effectuent aucune transaction réelle. Ne pas remplacer cette sélection par `npm test` sans examiner les tests live, dont certains font des POST sans paiement sur le service.
 
-La CI ajoutée vérifie cette même sélection et les empreintes de la copie. Son résultat est à consulter dans Actions : une configuration de test n'est pas une preuve de test passé.
+Vérification exécutée le 10 octobre 2026 : [GitHub Actions nº 38058028311](https://github.com/M-22-em/one-euro-agent/actions/runs/38058028311). Les 14 empreintes correspondent à l'amont ; les 20 tests sélectionnés passent, sans échec ni test ignoré. Le job vérifie le code du commit 2da42dc5a31e658ed607d3c538267c15cc1d0380 dans la proposition nº 5. Ce résultat couvre le connecteur et son démarrage dans le runner de test, pas une installation persistante ni un paiement.
 
 ## Condition pour sortir de la boîte noire
 
