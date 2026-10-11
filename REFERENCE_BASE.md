@@ -2,6 +2,18 @@
 
 Last verified: 11 October 2026.
 
+## Evidence snapshot
+
+All factual checks in this file were made against these exact repository revisions, so later upstream changes cannot silently alter the evidence base.
+
+| Source | Branch | Verified commit |
+|---|---|---|
+| Circadian agent-economy-data | main | `c28130a4fbf6f532f812266915a33d6c4229b269` |
+| x402 Bounty Hunter | main | `2b7acd5af1f6a18622eb737a31ad8d8964105cc9` |
+| Forge402 | main | `80623005daccf42cc609507a29af019a8dad8ead` |
+| Agent Marketplace | master | `80991b4fe29e13e6dff5973c1796f1b5b02ab000` |
+
+
 ## Purpose
 
 This file is the evidence base for rebuilding One Euro Agent from zero.
@@ -137,7 +149,7 @@ It is **not** the primary reference for our infrastructure stack, because that s
 
 ## What is implemented
 
-**IMPLEMENTED — executable source code**
+**IMPLEMENTED — executable source code, except the final payout which is an external platform effect documented and externally verifiable**
 
 The hunter implements a narrow real-money loop:
 
@@ -147,9 +159,9 @@ The hunter implements a narrow real-money loop:
 4. optionally buy task context over x402
 5. draft with a configured LLM
 6. pay to submit the draft
-7. wait for approval/rejection
+7. wait for the external platform's approval/rejection
 8. read earnings from the wallet record
-9. receive USDC if the entry wins
+9. the external platform pays USDC if the entry wins
 
 The code contains concrete economic controls:
 
@@ -502,27 +514,27 @@ No further architecture should be added until it answers one of these questions.
 ## Circadian
 
 - Public measurement repository: https://github.com/Circadian-agent/agent-economy-data
-- Earnings dataset: https://github.com/Circadian-agent/agent-economy-data/blob/main/data/agent-economy-earnings-2026-08-11.json
-- Venue sweep: https://github.com/Circadian-agent/agent-economy-data/blob/main/findings/2026-08-18-agent-earning-venue-sweep.md
-- TaskMarket settlement analysis: https://github.com/Circadian-agent/agent-economy-data/blob/main/findings/2026-08-19-taskmarket-settlement.md
-- Opportunity economics example: https://github.com/Circadian-agent/agent-economy-data/blob/main/findings/unblocked-but-not-worth-entering-2026-08-20.md
-- Tool verification failure analysis: https://github.com/Circadian-agent/agent-economy-data/blob/main/findings/2026-08-19-transport-not-content.md
-- Self-audit / demand-vs-plumbing test: https://github.com/Circadian-agent/agent-economy-data/blob/main/services/self-audit-2026-08-22.md
+- Earnings dataset: https://github.com/Circadian-agent/agent-economy-data/blob/c28130a4fbf6f532f812266915a33d6c4229b269/data/agent-economy-earnings-2026-08-11.json
+- Venue sweep: https://github.com/Circadian-agent/agent-economy-data/blob/c28130a4fbf6f532f812266915a33d6c4229b269/findings/2026-08-18-agent-earning-venue-sweep.md
+- TaskMarket settlement analysis: https://github.com/Circadian-agent/agent-economy-data/blob/c28130a4fbf6f532f812266915a33d6c4229b269/findings/2026-08-19-taskmarket-settlement.md
+- Opportunity economics example: https://github.com/Circadian-agent/agent-economy-data/blob/c28130a4fbf6f532f812266915a33d6c4229b269/findings/unblocked-but-not-worth-entering-2026-08-20.md
+- Tool verification failure analysis: https://github.com/Circadian-agent/agent-economy-data/blob/c28130a4fbf6f532f812266915a33d6c4229b269/findings/2026-08-19-transport-not-content.md
+- Self-audit / demand-vs-plumbing test: https://github.com/Circadian-agent/agent-economy-data/blob/c28130a4fbf6f532f812266915a33d6c4229b269/services/self-audit-2026-08-22.md
 - Public earnings narrative: https://circadian-agent.com/research/agent-economy-earnings
 
 ## x402 Bounty Hunter
 
 - Repository: https://github.com/webmilmind1/x402-bounty-hunter
-- Main earn loop: https://github.com/webmilmind1/x402-bounty-hunter/blob/main/hunt.mjs
-- README/economics: https://github.com/webmilmind1/x402-bounty-hunter/blob/main/README.md
+- Main earn loop: https://github.com/webmilmind1/x402-bounty-hunter/blob/2b7acd5af1f6a18622eb737a31ad8d8964105cc9/hunt.mjs
+- README/economics: https://github.com/webmilmind1/x402-bounty-hunter/blob/2b7acd5af1f6a18622eb737a31ad8d8964105cc9/README.md
 
 ## Forge402
 
 - Repository: https://github.com/AswinWebDev/Forge402
-- Architecture: https://github.com/AswinWebDev/Forge402/blob/main/AgentHub_Architecture.md
-- Core orchestrator: https://github.com/AswinWebDev/Forge402/blob/main/packages/core/orchestrator.js
+- Architecture: https://github.com/AswinWebDev/Forge402/blob/80623005daccf42cc609507a29af019a8dad8ead/AgentHub_Architecture.md
+- Core orchestrator: https://github.com/AswinWebDev/Forge402/blob/80623005daccf42cc609507a29af019a8dad8ead/packages/core/orchestrator.js
 
 ## Agent Marketplace
 
 - Repository: https://github.com/Juwebien/agent-marketplace
-- Architecture: https://github.com/Juwebien/agent-marketplace/blob/master/ARCHITECTURE.md
+- Architecture: https://github.com/Juwebien/agent-marketplace/blob/80991b4fe29e13e6dff5973c1796f1b5b02ab000/ARCHITECTURE.md
